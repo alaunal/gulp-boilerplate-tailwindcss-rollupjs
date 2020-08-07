@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ base.title }}</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#8dc449"/>
+
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content=""/>
+
+    <meta property="fb:app_id" content=""/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+
+    <link href="{{ base.static }}images/gojek_favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="canonical" href=""/>
+
+    {% block extra_meta %}{% endblock extra_meta %}
+    {% block extra_head %}{% endblock extra_head %}
+
+    <link rel="stylesheet" href="{{ base.static }}css/styles.css">
+
+    {% block extra_style %}{% endblock extra_style %}
+  </head>
+
+  <body>
+    {% block content %}{% endblock content %}
+
+    {% block base_scripts %}
+      <!-- modern browsers -->
+      <script type="module" src="{{ base.static }}js/main.js"></script>
+      <!-- old stuff -->
+      <script nomodule src="{{ base.static }}js/nomodule/main.js"></script>
+    {% endblock base_scripts %}
+
+    {% block extra_scripts %}{% endblock extra_scripts %}
+
+  </body>
+</html>
