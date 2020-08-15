@@ -16,6 +16,7 @@
 // -- General
 const gulp = require('gulp');
 const fs = require('fs');
+const del = require("del");
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync').create();
