@@ -12,7 +12,7 @@ This **WEB UIKIT** provides a simple way of setting up a modern web development 
 -  [**GULP**](https://gulpjs.com/) Automate and enhance your workflow.
 -  [**Nunjucks**](https://mozilla.github.io/nunjucks/) A rich and powerful templating language for JavaScript.
 -  [**Babeljs**](https://babeljs.io/) transpiler that allows you writing JS Code in ES2015/ES6 style.
--  [**Tailwindcss**](https://tailwindcss.com/: A utility-first CSS framework.
+-  [**Tailwindcss**](https://tailwindcss.com/) A utility-first CSS framework.
 -  [**Browsersync**](https://browsersync.io/) with Live reload server.
 
 
