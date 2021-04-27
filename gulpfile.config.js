@@ -11,6 +11,25 @@
  *
  */
 
+// -- fetch command line arguments
+
+const arg = (argList => {
+    let arg = {},
+        a, opt, thisOpt, curOpt;
+    for (a = 0; a < argList.length; a++) {
+        thisOpt = argList[a].trim();
+        opt = thisOpt.replace(/^\-+/, '');
+        if (opt === thisOpt) {
+            if (curOpt) arg[curOpt] = opt;
+            curOpt = null;
+        } else {
+            curOpt = opt;
+            arg[curOpt] = true;
+        }
+    }
+    return arg;
+})(process.argv);
+
 // -- Settings | Turn on/off build features
 
 const SETTINGS = {
@@ -19,7 +38,7 @@ const SETTINGS = {
     styles: true,
     copy: true,
     public: true,
-    pwa: true,
+    libs: true,
     reload: true
 };
 
@@ -47,7 +66,7 @@ const SRC = './src/';
 const BUILD = './build/';
 const STATIC = BUILD + 'static/';
 const ASSETS = SRC + 'assets/';
-const LIBS = SRC + 'static/';
+const LIBS = SRC + 'libs/';
 const HTML = SRC + 'public/';
 
 const PATHS = {
@@ -57,14 +76,14 @@ const PATHS = {
     build: BUILD,
     html: HTML,
     src: SRC,
-    styles: {
-        dir: SRC + 'styles/',
-        input: SRC + 'styles/*.scss',
+    tailwind: {
+        dir: ASSETS + 'styles/',
+        input: ASSETS + 'styles/*.css',
         output: STATIC + 'css/'
     },
     scripts: {
-        dir: SRC + 'js/',
-        input: SRC + 'js/',
+        dir: ASSETS + 'js/',
+        input: ASSETS + 'js/',
         output: STATIC + 'js/',
         outputNomodule: STATIC + 'js/nomodule'
     },
@@ -75,7 +94,13 @@ const PATHS = {
         ],
         output: BUILD,
         data: './site.config',
-    }
+    },
+    watch: {
+        static: [ASSETS + 'tailwind/', ASSETS + 'js/', LIBS],
+        all: SRC
+    },
+    portServe: arg.port ? Number(arg.port) : 8080,
+    portLiveServer: arg.port ? Number(arg.port) : 3000
 };
 
 

@@ -1,7 +1,138 @@
 {% extends "templates/layouts/container.html" %}
 
 {% block content %}
-<div class="container mx-auto px-4">
-  <h1>here!</h1>
-</div>
+<!-- Header Section -->
+{% include 'templates/components/header.html' %}
+
+
+<!-- Main Section -->
+<main class="min-h-screen w-full pt-14">
+    <div class="container mx-auto">
+        <section class="text-gray-600 px-5 pt-24">
+            <div class="container mx-auto flex items-center justify-center flex-col">
+                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="{{ base.static }}images/hero-kv.svg">
+                <div class="text-center lg:w-2/3 w-full">
+                    <h1 class="sm:text-4xl text-3xl mb-4 font-medium font-heading text-gray-900">GULP BOILERPLATE</h1>
+                    <p class="mb-8 leading-relaxed">
+                        A tool that we designed to make it easier for developers (especially Front-end Developers) to create and create user interfaces as outlined
+                        in the visual web form of the design that has been determined.
+                    </p>
+                    <div class="flex justify-center">
+                        <a class="inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 rounded text-lg" href="https://github.com/alaunal/gulp-boilerplate-tailwindcss-rollupjs">Github</a>
+                        <a class="ml-4 inline-flex text-gray-700 bg-white border-0 py-2 px-6 focus:outline-none text-lg" href="">v1.0.0</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-gray-600 px-5 py-20">
+            <div class="container mx-auto flex items-center justify-center flex-col">
+                <div class="lg:w-2/3 w-full">
+                    <div class="text-center">
+                        <h2 class="sm:text-4xl text-2xl mb-4 font-medium font-heading text-gray-900">Features</h2>
+                        <p class="mb-8 leading-relaxed">This WEB UIKIT provides a simple way of setting up a modern web development environment. Here is a list of the current features</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-4">
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">Gulp</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">Automate and enhance your workflow.</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">Nunjucks</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">A rich and powerful templating language for JavaScript.</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">Rollup Js</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">A module bundler for JavaScript.</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">TailwindCSS</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">A utility-first CSS framework packed with classes</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">Browsersync</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">with Live reload, Time-saving synchronised browser testing.</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between rounded-lg h-full bg-gray-100 p-8 flex-col">
+                            <div class="flex items-center mb-3">
+                                <h2 class="text-gray-900 text-lg font-heading font-medium">Babel</h2>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="leading-relaxed text-base">transpiler that allows you writing JS Code in ES2015/ES6 style.</p>
+                            </div>
+                            <div class="">
+                                <a class="mt-3 text-blue-700 inline-flex items-center">Documentation
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Footer Section -->
+{% include 'templates/components/footer.html' %}
+
 {% endblock %}
